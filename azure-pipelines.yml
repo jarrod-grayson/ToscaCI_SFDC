@@ -14,7 +14,7 @@ steps:
   displayName: 'Run Tosca CI'
   inputs:
     filename: '"C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\ToscaCommander\ToscaCI\Client\ToscaCIClient.exe"'
-    arguments: '-m local -c "C:\Tricentis\Automation\ToscaCI\Config3.xml" -t junit - r "C:\Tricentis\Automation\ToscaCI\ToscaCIResults\Results.xml"''     '
+    arguments: '-m local -c "C:\Tricentis\Automation\ToscaCI\ConfigADOSFDC.xml" -t junit - r "C:\Tricentis\Automation\ToscaCI\ToscaCIResults\Results.xml"''     '
 
 - task: PublishTestResults@1
   displayName: 'Publish Test Results C:\Tricentis\Automation\ToscaCI\ToscaCIResults'
@@ -30,7 +30,7 @@ steps:
    
    $body = @{
     'projectId' = '87143'
-    'testcycle' = '2292302'
+    'testcycle' = '3025030'
     'result' = $payload
    }
    
