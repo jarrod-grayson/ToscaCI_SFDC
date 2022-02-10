@@ -16,11 +16,6 @@ steps:
     filename: '"C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\ToscaCommander\ToscaCI\Client\ToscaCIClient.exe"'
     arguments: '-m local -c "C:\Tricentis\Automation\ToscaCI\ConfigADOSFDC.xml" -t junit - r "C:\Tricentis\Automation\ToscaCI\ToscaCIResults\Results.xml"''     '
 
-- task: PublishTestResults@1
-  displayName: 'Publish Test Results C:\Tricentis\Automation\ToscaCI\ToscaCIResults'
-  inputs:
-    testResultsFiles: 'C:\Tricentis\Automation\ToscaCI\ToscaCIResults\Results.xml'
-
 - powershell: |
    $url = 'https://pulse-7.qtestnet.com/webhook/ea99f7b9-7a0a-4dcd-b99d-1a11e7c4c8e3'
    
